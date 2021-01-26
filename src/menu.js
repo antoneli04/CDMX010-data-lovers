@@ -22,9 +22,11 @@ function showMenu() {
         menu.classList.remove("enable-menu");
         menu.classList.add("disable-menu");
         content.classList.remove("content1");
-        content.classList.add("content");
+        content.classList.add("content");   
     }
 }
+
+
 
 button.addEventListener("click", showMenu);
 

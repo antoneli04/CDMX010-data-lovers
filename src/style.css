@@ -7,10 +7,8 @@
 body {
   /* background: url('img/portal.jpg') no-repeat;
   background-size: cover; */
-  background-color: rgba(0, 0, 0,0.9);
+  background-color: #000;
   font-family: 'Special Elite', cursive;
-  /* width: 100%;
-  height: 100%; */
 }
 
 main {
@@ -20,9 +18,9 @@ main {
 
 header {
   display: flex;
-  height: 150px;
+  height: 125px;
   width: 100%;
-  background-color: #000;
+  background-color: #000000;
   padding: 30px;
   position: fixed;
 }
@@ -35,20 +33,13 @@ header h1 {
     animation-name: entrar;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    letter-spacing: 5px;
 }
 
 header .menuIcon a:active img {
   transform: rotate(90deg);
   transition: all .3s ease-in-out 0s;
 }
-
-/* main {
-  align-items: stretch;
-  display: flex;
-  flex-flow: row wrap;
-  height: 100%;
-  flex-shrink: 0;
-}  */
 
 @keyframes entrar {
   0%{transform: translate(0px);}
@@ -81,13 +72,14 @@ header .menuIcon a:active img {
 
 .nav {
   width: 25%;
+  min-width: 300px;
   display: flex;
   height: 100%;                                   
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
+  margin-top: 100px;
+  background-color: #13D2F0;
   position: fixed;
-  margin-top: 150px;
-  background-color:#13D2F0;
 }
 
 .nav ul {
@@ -96,7 +88,7 @@ header .menuIcon a:active img {
 }
 
 .nav li {
-  padding: 8px;
+  padding: 6px;   
 }
 
 .nav .itemList li {
@@ -111,17 +103,12 @@ header .menuIcon a:active img {
   display: block;
 }
 
-/* ul .show {
-  text-align: left;
-} */
 
-ul li {
-  color: #000;
+ul li{
+  color: #000; 
 }
 
 ul li:hover {
-  /* background-color: rgba(0, 0, 0,0.5);
-  color: #fff;  */
   cursor: pointer;
 }
 
@@ -130,8 +117,9 @@ a {
   color: #000;
 }
 
-a:hover{
-  color: white;
+a:hover {
+  color: #fff; 
+  text-shadow: 0px 1px 5px solid black;
 }
 
 .enable-menu {
@@ -141,11 +129,6 @@ a:hover{
 .disable-menu {
   display: none;
 }
-
-/* input{
-  position: relative;
-  left: -10px;
-} */
 
 select {
   font-size: 18px;
@@ -161,91 +144,54 @@ select:focus {
   outline: none;
   color: #000;
 }
-/* option:hover{
+
+select option:hover {
   background-color: #000;
-} */
+}
+
 .select{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 40px;
   margin: 10px;
-  /* animation-name: colors-nav;
-  animation-duration: 4s;
-  animation-iteration-count: infinite; */
   line-height: 200%;
   border: none;
-  background-color:#13D2F0;
+  background-color: #13D2F0; 
+}
+
+#Icon-box {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.Icons {
+  border-radius: 50%;
+  /* box-shadow: 0px 0px 5px black inset; */
+}
+
+.Icons:hover {
+  border-radius: 50%;
+  transform: scale(1.3);
+  /* box-shadow: 0px 0px 15px rgb(2, 83, 104); */
 }
 
 .content1 {
   width: 75vw;
   margin-left: 25vw;
 }
-
 .content {
   width: 100vw;
   margin-left: 0vw;
 }
 
-select option:hover{
-  background-color: #000;
-}
-
-/* option:hover {
-  background-color: #000;
-} */
-
-/* select option:hover {
-  box-shadow: 0 0 10px 100px #000 inset;
-} */
-
-/* select:focus > option { 
-  background: #000 !important;
-  color: white;
-} */
-
-/* select>option:hover {
-        color: #ffffff;
-    } */
- /* select:active, select:hover {
-      outline-color: red
-    } */
-
-/* #content{
- background: url('img/portal.jpg') no-repeat; 
-  background-size: 100%;
-  background-color: #444444; 
-  flex-grow: 1;
-  flex-wrap: wrap;
-  height: 100%;
-  padding: 25px;
-  width: auto;
-  color: rgb(255, 255, 255);
-  font-size: 30px;  
-} */
-
-/* #character {
-  width: 25%;
-  height: 100%;
-  color: #000;
-  line-height: 150%;
-  font-size: 18px;
-  border-radius: 20px;
-  padding: 1%;
-  text-align: center;
-  animation-name: colors-nav;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-
-} */
-
 #character {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 150px;
-} 
+  margin-top: 125px;
+}
 
 .card {
   width: 250px;
@@ -255,20 +201,22 @@ select option:hover{
   font-size: 17px;
   border-radius: 20px;
   padding: 1%;
-  /* margin-bottom:3%; */
+  padding-top: 2%;
   text-align: center;
   animation-name: colors-nav;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  margin: 30px;
-  /* float: left;
-  margin-right: 3%; */
+  margin: 30px; 
+  /* box-shadow: 0px 0px 50px rgb(203, 240, 143); */
+  box-shadow: 0px 0px 18px black inset;  
+  border: 3px solid black;
 }
 
 #character img {
   width: 90%;
   border-radius: 20px;
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.6)
+  box-shadow: 10px 10px 10px rgba(0,0,0, 0.8);
+  border: 3px solid black;
 }
 
 @font-face {
@@ -277,35 +225,3 @@ select option:hover{
        url('font/get_schwifty.ttf') format('truetype');
 }
 
-/* @media screen and (max-width:800px){
-  .btn-menu {
-    width: 10%;
-    height: 90%;
-  }
-
-  .nav {
-    width: 50%;
-  }
-
-  body {
-    width: 100%;
-  }
-  h1 {
-    font-size: 40px;
-  }
-}
-
-@media screen and (max-width:400px){
-  .btn-menu {
-    width: 30%;
-    height: 90%;
-  }
-
-  .nav {
-    width: 50%;
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-} */
