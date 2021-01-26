@@ -4,34 +4,32 @@
   box-sizing: border-box;
 }
 
-/* html, body {
-  height: 100%;
-  width: 100%;
-} */
-
 body {
   /* background: url('img/portal.jpg') no-repeat;
   background-size: cover; */
+  background-color: rgba(0, 0, 0,0.9);
   font-family: 'Special Elite', cursive;
-  width: 100%;
-  /* display: flex;
-  flex-direction: column; */
+  /* width: 100%;
+  height: 100%; */
+}
 
+main {
+  display: flex;
+  flex: 1 0 100%;
 }
 
 header {
   display: flex;
-  height: 20%;
+  height: 150px;
   width: 100%;
   background-color: #000;
   padding: 30px;
+  position: fixed;
 }
 
 header h1 {
     color: #90C944;
-    /* padding-top: 50px; */
     font-size: 50px;
-    /* display: inline-block; */
     font-family: 'Get Schwifty';
     align-items: center;
     animation-name: entrar;
@@ -44,15 +42,13 @@ header .menuIcon a:active img {
   transition: all .3s ease-in-out 0s;
 }
 
-main {
+/* main {
   align-items: stretch;
   display: flex;
   flex-flow: row wrap;
   height: 100%;
-  /* flex: auto;
-  width: 100%;
-  align-items: flex-end; */
-} 
+  flex-shrink: 0;
+}  */
 
 @keyframes entrar {
   0%{transform: translate(0px);}
@@ -61,17 +57,6 @@ main {
   75%{transform: translate(100px);}
   100%{transform: translate(0px);}
 }
-
-/* h1 {
-  color: #90C944;
-  padding-top: 50px;
-  font-size: 50px;
-  display: inline-block;
-  font-family: 'Get Schwifty';
-  animation-name: entrar;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-} */
 
 .btn-menu {
   /* background: url('img/menu-icon.png') no-repeat; 
@@ -95,17 +80,14 @@ main {
 }
 
 .nav {
-  width: 30%;
-  /* height: 100%; */
-  height: 895px;
+  width: 25%;
+  display: flex;
+  height: 100%;                                   
   text-align: center;
-  background-color: #11AFC9;
-  font-size: 30px;
-  /* margin-top: -12px; */
-  animation-name: colors-nav;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  /* border-radius: 10px; */
+  font-size: 25px;
+  position: fixed;
+  margin-top: 150px;
+  background-color:#13D2F0;
 }
 
 .nav ul {
@@ -129,20 +111,17 @@ main {
   display: block;
 }
 
-ul .show {
+/* ul .show {
   text-align: left;
-  margin-left: 170px;
-}
-/* 
-li:hover {
-  background-color: rgba(0, 0, 0);
-   color: #fff; 
-  cursor: pointer;
 } */
 
+ul li {
+  color: #000;
+}
+
 ul li:hover {
-  background-color: rgba(0, 0, 0,0.1);
-  /* color: #fff; */
+  /* background-color: rgba(0, 0, 0,0.5);
+  color: #fff;  */
   cursor: pointer;
 }
 
@@ -151,9 +130,9 @@ a {
   color: #000;
 }
 
-/* a:hover {
-  color: #fff;
-} */
+a:hover{
+  color: white;
+}
 
 .enable-menu {
   display: block;
@@ -163,38 +142,142 @@ a {
   display: none;
 }
 
-/* label:hover {
-  color: #fff;
-} */
-
-input{
+/* input{
   position: relative;
   left: -10px;
+} */
+
+select {
+  font-size: 18px;
+  border-radius: 5px;
+  font-family: 'Special Elite', cursive;
 }
 
-#content{
-  background: url('img/portal.jpg') no-repeat;
+select:hover{
+  color: white;
+}
+
+select:focus {
+  outline: none;
+  color: #000;
+}
+/* option:hover{
+  background-color: #000;
+} */
+.select{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40px;
+  margin: 10px;
+  /* animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; */
+  line-height: 200%;
+  border: none;
+  background-color:#13D2F0;
+}
+
+.content1 {
+  width: 75vw;
+  margin-left: 25vw;
+}
+
+.content {
+  width: 100vw;
+  margin-left: 0vw;
+}
+
+select option:hover{
+  background-color: #000;
+}
+
+/* option:hover {
+  background-color: #000;
+} */
+
+/* select option:hover {
+  box-shadow: 0 0 10px 100px #000 inset;
+} */
+
+/* select:focus > option { 
+  background: #000 !important;
+  color: white;
+} */
+
+/* select>option:hover {
+        color: #ffffff;
+    } */
+ /* select:active, select:hover {
+      outline-color: red
+    } */
+
+/* #content{
+ background: url('img/portal.jpg') no-repeat; 
   background-size: 100%;
-  /* flex-grow: 1; */
-  /* background-color: #444444; */
+  background-color: #444444; 
   flex-grow: 1;
-  height: 895px;
+  flex-wrap: wrap;
+  height: 100%;
   padding: 25px;
   width: auto;
   color: rgb(255, 255, 255);
   font-size: 30px;  
+} */
+
+/* #character {
+  width: 25%;
+  height: 100%;
+  color: #000;
+  line-height: 150%;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 1%;
+  text-align: center;
+  animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+} */
+
+#character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 150px;
+} 
+
+.card {
+  width: 250px;
+  height: 550px;
+  color: #000;
+  line-height: 150%;
+  font-size: 17px;
+  border-radius: 20px;
+  padding: 1%;
+  /* margin-bottom:3%; */
+  text-align: center;
+  animation-name: colors-nav;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  margin: 30px;
+  /* float: left;
+  margin-right: 3%; */
+}
+
+#character img {
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.6)
 }
 
 @font-face {
   font-family: 'Get Schwifty';
   src: local('get_schwifty'),
        url('font/get_schwifty.ttf') format('truetype');
-  /* font-weight: normal;
-  font-style: normal;
-  unicode-range: "U+0-10FFFF"; */
 }
 
-@media screen and (max-width:800px){
+/* @media screen and (max-width:800px){
   .btn-menu {
     width: 10%;
     height: 90%;
@@ -225,4 +308,4 @@ input{
   h1 {
     font-size: 40px;
   }
-}
+} */
