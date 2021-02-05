@@ -12,7 +12,7 @@
 
 ## 1. Project
 
-![](/src/img/00.jpg) 
+![](/src/img/00.png) 
 
 This platform allows the user to apply filters to make their search faster:
 
