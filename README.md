@@ -6,7 +6,7 @@
 * [1. Project](#2-project)
 * [2. Context](#3-context)
 * [3. Usability](#5-usability)
-* [4. Retrospective](#6-retrospective)
+* [4. Prototypes](#6-prototypes)
 
 ***
 
