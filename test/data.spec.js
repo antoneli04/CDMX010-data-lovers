@@ -138,6 +138,10 @@ describe('Function sort', () => {
    expect(orderCardsAZ(characters)).toStrictEqual(charactersOrder);
   });
 
+  describe('Function sort', () => {
+    it('Order A-Z', () => {
+     expect(orderCardsAZ(characters)).toStrictEqual(charactersOrder);
+    });
 //Incierto
 
 
