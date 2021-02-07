@@ -5,8 +5,6 @@
 }
 
 body {
-  /* background: url('img/portal.jpg') no-repeat;
-  background-size: cover; */
   background-color: #000;
   font-family: 'Special Elite', cursive;
 }
@@ -23,6 +21,8 @@ header {
   background-color: #000000;
   padding-top: 20px;
   position: fixed;
+  /* justify-content: space-between; */
+  /* align-items: center; */
 }
 
 header h1 {
@@ -36,6 +36,7 @@ header h1 {
     letter-spacing: 5px;
 }
 
+
 header .menuIcon a:active img {
   transform: rotate(90deg);
   transition: all .3s ease-in-out 0s;
@@ -47,6 +48,24 @@ header .menuIcon a:active img {
   50%{transform: translate(450px);}
   75%{transform: translate(100px);}
   100%{transform: translate(0px);}
+}
+
+@keyframes neon {
+  0%,15%,45%,60%,75%,90%
+  {
+    color: #11AFC9;
+    text-shadow: none;
+  }
+  15.1%,45.1%,60.1%,75.1%,100%
+  {
+    color: #11AFC9;
+    text-shadow: 0 0 3px #90C944,
+    0 0 10px #90C944,
+    0 0 5px #90C944,
+    0 0 15px #90C944,
+    0 0 30px #90C944;
+  }
+
 }
 
 .btn-menu {
@@ -195,7 +214,7 @@ select option:hover {
 
 .card {
   width: 250px;
-  height: 550px;
+  height: 575px;
   color: #000;
   line-height: 150%;
   font-size: 17px;
@@ -210,6 +229,7 @@ select option:hover {
   /* box-shadow: 0px 0px 50px rgb(203, 240, 143); */
   box-shadow: 0px 0px 18px black inset;  
   border: 3px solid black;
+  
 }
 
 #character img {
@@ -223,24 +243,6 @@ select option:hover {
   font-family: 'Get Schwifty';
   src: local('get_schwifty'),
        url('font/get_schwifty.ttf') format('truetype');
-}
-
-
-@keyframes neon {
-  0%,15%,45%,60%,75%,90%
-  {
-    color: #11AFC9;
-    text-shadow: none;
-  }
-  15.1%,45.1%,60.1%,75.1%,100%
-  {
-    color: #11AFC9;
-    text-shadow: 0 0 3px #90C944,
-    0 0 10px #90C944,
-    0 0 5px #90C944,
-    0 0 15px #90C944,
-    0 0 30px #90C944;
-  }
 }
 
 .alert {
@@ -302,6 +304,7 @@ select option:hover {
     background-color: #13D2F0;
     position: fixed;
   }
+  
   @keyframes entrar {
     0%{transform: translate(0px);}
     25%{transform: translate(20px);}
@@ -309,42 +312,56 @@ select option:hover {
     75%{transform: translate(20px);}
     100%{transform: translate(0px);}
   }
+
   .nav ul {
     list-style: none;
     padding: 10px;
   }
+  
   .nav li {
     padding: 6px;   
   }
+  
   .nav .itemList li {
     display: block;
   }
+  
   .hide {
     display: none;
   }
+  
   .show {
     display: block;
   }
+  
+  
   ul li{
     color: #000; 
   }
+  
   ul li:hover {
     cursor: pointer;
   }
+  
   a {
     text-decoration: none;
     color: #000;
   }
+  
   a:hover {
     color: #fff; 
     text-shadow: 0px 1px 5px solid black;
   }
+  
   .enable-menu {
     display: block;
   }
+  
   .disable-menu {
     display: none;
   }
+  
+  
   .select{
     display: flex;
     flex-wrap: wrap;
@@ -354,5 +371,11 @@ select option:hover {
     line-height: 150%;
     border: none;
     background-color: #13D2F0; 
+  }
+  
+
+  .card{
+    height: 500px;
+    font-size: 15px;
   }
 }

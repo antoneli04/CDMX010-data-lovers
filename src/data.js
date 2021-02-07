@@ -1,10 +1,7 @@
 //El proposito de data.js es manipular la data.... SOLO LA DATA
-
 import rickandmorty from './data/rickandmorty/rickandmorty.js';
-
 let information = rickandmorty.results;
 //contenedor para los resultados
-
 ///funciones  
     function filterResults(order) {
      let myFunctionSort
@@ -53,7 +50,7 @@ let information = rickandmorty.results;
       }
       return element;
     }
-
+    
     function orderCardsAZ(){
      const {order} = information;
     if(order)
@@ -77,5 +74,26 @@ function orderCardsZA(){
     return 0;
 })
 }
-
 export { filterResults, filterSpecies, filterGender, filterStatus, filterType, orderCardsAZ, orderCardsZA };
+
+
+// export function filterAlgo(caracteristica){
+//   return `${caracteristica}´jajajajaja`
+// }
+
+// export function filterBySpecies(specie){
+//   return `${specie}´jajajajaja`  
+// }
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(word => word.length > 6);
+
+// console.log(result);
+
+// export function filterAlive(statusAlive, status) {
+
+//   const filterForAlive= statusAlive.filter(allData=> allData.status===status);
+  
+//   return filterForAlive;
+// };
